@@ -13,6 +13,7 @@ public class ProxyJoinEvent {
     private final BanSystem banSystem;
 
     public ProxyJoinEvent(BanSystem banSystem) {
+
         this.banSystem = banSystem;
         banSystem.getProxyServer().getEventManager().register(banSystem, this);
     }
