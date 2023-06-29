@@ -20,7 +20,6 @@ public class ProxyJoinEvent {
     @Subscribe(order = PostOrder.FIRST)
     public void onPlayerJoin(ServerPreConnectEvent e) {
         Ban ban = banSystem.getDb().getBan(e.getPlayer().getUniqueId());
-        System.out.println("KEIN BAN! " + e.getPlayer().getUsername());
         if(ban == null) { return; }
 
         long current = System.currentTimeMillis();
