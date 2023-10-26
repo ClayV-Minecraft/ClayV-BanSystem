@@ -18,8 +18,9 @@ public class MongoManager {
 
     public MongoManager(BanSystem banSystem) {
         this.banSystem = banSystem;
-        MongoClient mongoClient = MongoClients.create("mongodb://10.0.0.20:27017");
-        MongoDatabase database = mongoClient.getDatabase("BanSystem-Dev");
+        MongoClient mongoClient =
+                MongoClients.create("mongodb://root:_2%23UVDM.xXRx%3DNaU%3D%23Hu%26Ue%23@172.18.0.1:27017/?authMechanism=SCRAM-SHA-1");
+        MongoDatabase database = mongoClient.getDatabase("BanSystem");
         banCollection = database.getCollection("Ban");
     }
 
